@@ -1,0 +1,8 @@
+name: Filefield sources flysystem
+description: 'Filefield sources integration with flysystem'
+type: module
+package: Filefield sources
+core: 8.x
+dependencies:
+  - flysystem
+  - filefield_sources
