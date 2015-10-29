@@ -28,5 +28,5 @@ Installation
    under a "File sources" details. You can enable "File attach by Flysystem" and 
    configure "flysystem setting".
 
-4) Create a piece of content that uses your file and try it out.
+4) You can create a content that uses your file and try it.
 
