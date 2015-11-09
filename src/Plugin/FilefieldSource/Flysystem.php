@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \Drupal\filefield_sources_flysystem\Plugin\FilefieldSource\Flysystem.
+ * Contain \Drupal\filefield_sources_flysystem\Plugin\FilefieldSource\Flysystem.
  */
 
 namespace Drupal\filefield_sources_flysystem\Plugin\FilefieldSource;
@@ -73,7 +73,7 @@ class Flysystem extends FlysystemFactory implements FilefieldSourceInterface, Co
       }
       // Clean up the file name extensions and transliterate.
       $original_filepath = $filepath;
-      $new_filepath = filefield_sources_clean_filename($filepath, $instance->getSetting['file_extensions']);
+      $new_filepath = filefield_sources_clean_filename($filepath, $instance->getSetting('file_extensions'));
       rename($filepath, $new_filepath);
       $filepath = $new_filepath;
       // Run all the normal validations, minus file size restrictions.
@@ -84,7 +84,7 @@ class Flysystem extends FlysystemFactory implements FilefieldSourceInterface, Co
       // Serve files from source folder directly.
       if ($element['#filefield_sources_settings']['flysystem']['attach_mode'] == FILEFIELD_SOURCE_FLYSYSTEM_ATTACH_MODE_SERVEFROMFOLDER) {
         $directory = $filepath;
-        if ($file = filefield_sources_save_file_servefromattach($filepath, $validators, $directory)) {
+        if ($file = filefield_sources_flysystem_save_file_servefromattach($filepath, $validators, $directory)) {
           if (!in_array($file->id(), $input['fids'])) {
             $input['fids'][] = $file->id();
           }
@@ -213,7 +213,7 @@ class Flysystem extends FlysystemFactory implements FilefieldSourceInterface, Co
     $element = $variables['element'];
     $options = form_select_options($element['filename']);
     $option_output = '';
-    foreach ($options as $key => $value) {
+    foreach ($options as $value) {
       $option_output .= '<option value=' . $value["value"] . '>' . $value["label"] . '</option>';
     }
     if (isset($element['attach_message'])) {
@@ -277,7 +277,7 @@ class Flysystem extends FlysystemFactory implements FilefieldSourceInterface, Co
 
     if (count($files)) {
       $options = array('' => t('-- Select file --'));
-      foreach ($files as $key => $fileinfo) {
+      foreach ($files as $fileinfo) {
         $file_name = $fileinfo['basename'];
         $file_url = $settings['select_scheme'] . '://' . $fileinfo['path'];
         $options[$file_url] = $file_name;

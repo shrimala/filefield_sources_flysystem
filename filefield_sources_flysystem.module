@@ -19,7 +19,7 @@ const FILEFIELD_SOURCE_FLYSYSTEM_SCHEME = '';
  *
  * @see file_save_upload()
  */
-function filefield_sources_save_file_servefromattach($filepath, $validators = array(), $destination = FALSE, $replace = FILE_EXISTS_RENAME) {
+function filefield_sources_flysystem_save_file_servefromattach($filepath, $validators = array(), $destination = FALSE, $replace = FILE_EXISTS_RENAME) {
   $user = \Drupal::currentUser();
 
   // Begin building file object.

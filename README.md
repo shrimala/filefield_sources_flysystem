@@ -4,11 +4,11 @@ FileField Sources Flysystem
 
 Description
 -----------
-FileField Sources Flysystem module enhances the functionalities of Filefield 
-Sources module for Drupal 8.It allows you to connect with different filesystems 
-like dropbox, S3 etc uisng flysystem and you can select files from different 
+FileField Sources Flysystem module enhances the functionalities of Filefield
+Sources module for Drupal 8.It allows you to connect with different filesystems
+like dropbox, S3 etc uisng flysystem and you can select files from different
 directories of that filesystem and upload it in you drupal storage. you can also
-access files directly from remote storage by using "serve from your current 
+access files directly from remote storage by using "serve from your current
 location".
 
 
@@ -25,8 +25,7 @@ Installation
    edit an existing one.
 
    While editing the file or image field, you'll have new options available
-   under a "File sources" details. You can enable "File attach by Flysystem" and 
+   under a "File sources" details. You can enable "File attach by Flysystem" and
    configure "flysystem setting".
 
 4) You can create a content that uses your file and try it.
-
