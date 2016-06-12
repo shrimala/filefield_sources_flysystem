@@ -1,0 +1,10 @@
+{
+    "name": "drupal/filefield_sources_flysystem",
+    "description": "Offers Flysystem storage locations as file field sources.",
+    "type": "drupal-module",
+    "license": "GPL-2.0+",
+    "require": {
+      "drupal/fieldfield_sources",
+      "drupal/flysystem"      
+    }
+}
