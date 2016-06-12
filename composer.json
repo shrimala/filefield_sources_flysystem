@@ -4,7 +4,7 @@
     "type": "drupal-module",
     "license": "GPL-2.0+",
     "require": {
-      "drupal/fieldfield_sources",
-      "drupal/flysystem"      
+      "drupal/fieldfield_sources": "1.0.x-dev",
+      "drupal/flysystem": "1.0.x-dev"      
     }
 }
