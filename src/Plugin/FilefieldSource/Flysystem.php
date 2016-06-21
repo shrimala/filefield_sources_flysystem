@@ -1,4 +1,5 @@
 <?php
+
 namespace Drupal\filefield_sources_flysystem\Plugin\FilefieldSource;
 
 /**
@@ -18,7 +19,6 @@ use Drupal\flysystem\FlysystemFactory;
 use \GuzzleHttp\ClientInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-
 
 /**
  * A FileField source plugin to allow use of files within a server directory.
