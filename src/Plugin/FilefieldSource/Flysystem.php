@@ -1,26 +1,20 @@
 <?php
+namespace Drupal\filefield_sources_flysystem\Plugin\FilefieldSource;
 
 /**
  * @file
  * Contain \Drupal\filefield_sources_flysystem\Plugin\FilefieldSource\Flysystem.
  */
-
-namespace Drupal\filefield_sources_flysystem\Plugin\FilefieldSource;
-
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\filefield_sources\FilefieldSourceInterface;
 use Drupal\Core\Field\WidgetInterface;
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Site\Settings;
 use Drupal\Core\Template\Attribute;
-use Drupal\Core\Url;
-use Drupal\Component\Utility\Html;
 use Symfony\Component\HttpFoundation\Request;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\ReplaceCommand;
-use Dropbox\Client;
 use Drupal\flysystem\FlysystemFactory;
-use Drupal\flysystem\FlysystemBridge;
 use \GuzzleHttp\ClientInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
